@@ -1,10 +1,10 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import bg from '../assets/images/bg.jpeg'
 const Header = () => {
   const [text] = useTypewriter({
-    words: [" Clicks", " Comfort"],
+    words: [" Furniture", " Comfort"],
     loop: {},
     typeSpeed: 70,
     deleteSpeed: 50,
@@ -14,6 +14,7 @@ const Header = () => {
   return (
     <div
       className="bg-[url('https://images.unsplash.com/photo-1616440537338-1d04df3987f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center min-h-[50vh] w-full font-figtree"
+      style={{ backgroundImage: `url(${bg})` }}
       id="header"
     >
       <div className="flex w-full min-h-[50vh] items-center justify-center bg-gradient-to-t from-black/25 via-black/75 to-black/80">
@@ -29,7 +30,7 @@ const Header = () => {
           </div>
           <div className="flex w-full items-center justify-center pt-4">
             <p className="text-center text-sm text-white font-normal">
-              "A clutted desk is a cluttered mind"
+              "A clutted furniture is a cluttered mind"
             </p>
           </div>
           <div className="flex items-center justify-end pt-2">

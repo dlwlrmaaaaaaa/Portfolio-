@@ -1,17 +1,24 @@
 import React, { useRef, useState } from "react";
 import Data from "../JSON/Scrollables.json";
 import { BiMouseAlt } from "react-icons/bi";
+import { BiCabinet } from "react-icons/bi";
+import { pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10 } from './icons';
 
 //importing icons
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
+import PreviewImage from "./Modal/PreviewImage";
+import Contact from "./Modal/Contact";
+
+const images = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10];
 
 const Sideways = () => {
   const containerRef = useRef(null);
   const [hoverIndex, setHoverIndex] = useState(null);
-
+  const [showImage, setShowImage] = useState(false);
+  const [imagesSrc, setImagesSrc] = useState("");
   const handleScrollRight = (scrollOffset) => {
     if (containerRef.current) {
       containerRef.current.scrollLeft += scrollOffset;
@@ -25,23 +32,23 @@ const Sideways = () => {
   };
 
   return (
+  <>
     <div
-      className="flex items-center justify-center w-full overflow-hidden bg-[#FAF5FF]"
-      id="mice"
+      className="flex items-center justify-center w-full overflow-hidden bg-[#FAF5FF] z-[1]"
+      id="cabinet"
     >
       <div className="flex flex-col items-start justify-center w-full lg:w-4/5 pt-20 px-12 font-figtree antialiased">
         <div className="w-full flex-col">
           <div className="flex items-center justify-start gap-4 w-full">
             <div className="text-sm lg:text-xl p-3 text-white hover:text-[#2f2f2f] bg-[#2f2f2f] hover:bg-gray-200 ease-in-out duration-500 rounded-full flex items-center justify-center">
-              <BiMouseAlt />
+              <BiCabinet />
             </div>
             <div className="flex flex-col w-3/4">
               <p className="text-lg lg:text-2xl font-semibold truncate capitalize font-signika">
-                Gaming and Productivity Mouse
+                Cabinet, Vanity, and Countertop
               </p>
               <p className="font-figtree text-sm font-normal truncate lowercase">
-                Unleash Your Potential: Explore Our Elite Collection of
-                Peripherals.
+              Discover the perfect blend of style and functionality with our premium selection of cabinets, vanities, and countertops. Whether you're renovating your kitchen, bathroom, or any other space, our products are designed to meet your needs and exceed your expectations.
               </p>
             </div>
           </div>
@@ -51,15 +58,19 @@ const Sideways = () => {
             className="flex flex-row overflow-x-auto scrollbar-hide w-full py-8 gap-6"
             ref={containerRef}
           >
-            {Data.map((data, index) => (
+            {images.map((data, index) => (
               <div
                 className="relative flex bg-gray-200 rounded-md min-w-[280px] max-w-[280px] h-[250px] overflow-hidden cursor-pointer"
                 key={index}
                 onMouseEnter={() => setHoverIndex(index)}
                 onMouseLeave={() => setHoverIndex(null)}
+                onClick={() => {
+                  setShowImage(!showImage);
+                  setImagesSrc(data);
+                }}
               >
                 <img
-                  src={data.src}
+                  src={data}
                   alt="/"
                   className="w-full object-cover object-center hover:scale-110 ease-in-out duration-500 antialiased"
                 />
@@ -70,26 +81,6 @@ const Sideways = () => {
                       : "absolute w-full h-full bg-gradient-to-t from-black/5 via-black/10 to-black/20 pointer-events-none ease-in-out duration-500 "
                   }
                 ></div>
-                <div className="absolute w-full p-6 pointer-events-none">
-                  <div className="w-full">
-                    <p className="font-semibold text-md text-white truncate capitalize">
-                      {data.category}
-                    </p>
-                  </div>
-                  <div className="relative w-full py-2 flex items-start justify-center pointer-events-none">
-                    <div
-                      className={
-                        hoverIndex === index
-                          ? "absolute w-full left-[0] ease-in-out duration-500"
-                          : "absolute w-full left-[-200%] ease-in-out duration-500"
-                      }
-                    >
-                      <p className="text-sm font-figtree text-white font-normal line-clamp-2 lowercase">
-                        {data.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
@@ -112,6 +103,14 @@ const Sideways = () => {
         </div>
       </div>
     </div>
+            {showImage && (
+              <PreviewImage
+                showImage={showImage}
+                closeImage={() => setShowImage(!showImage)}
+                imageName={imagesSrc}
+              />
+            )}
+    </>
   );
 };
 

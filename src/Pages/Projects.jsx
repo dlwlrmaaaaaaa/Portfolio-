@@ -1,15 +1,16 @@
 import React from "react";
-import Sideways from "../Components/Sideways";
 import Footer from "../Components/Footer";
 import HeaderForm from "../Components/HeaderForm";
-const Home = () => {
+import ProjectList from "../Components/ProjectList";
+
+const Projects = () => {
   return (
     <>
       <HeaderForm />
-      <Sideways/>
+      <ProjectList/>
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default Projects;

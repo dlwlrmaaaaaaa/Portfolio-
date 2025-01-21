@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 import Contact from "../Components/Modal/Contact";
 
 //importing icons
@@ -50,22 +51,16 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:flex gap-4 p-2 font-figtree text-white font-normal text-sm items-center justify-center">
             <Link
-              to="mice"
-              smooth={true}
-              duration={500}
-              offset={-80}
+              to="/"
               className="cursor-pointer"
             >
-              Mice
+              Home
             </Link>
             <Link
-              to="keyboards"
-              smooth={true}
-              duration={500}
-              offset={-80}
+              to="/projects"     
               className="cursor-pointer"
             >
-              Keyboards
+              Projects
             </Link>
             <div
               className="bg-[#FAF5FF] px-4 py-2 text-black rounded overflow-hidden cursor-pointer group ease-in-out duration-500"

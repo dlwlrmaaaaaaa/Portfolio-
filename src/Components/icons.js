@@ -1,0 +1,18 @@
+import pic1 from '../assets/images/pic (1).jpg'
+import pic2 from '../assets/images/pic (2).jpg'
+import pic3 from '../assets/images/pic (3).jpg'
+import pic4 from '../assets/images/pic (4).jpg'
+import pic5 from '../assets/images/pic (5).jpg'
+import pic6 from '../assets/images/pic (6).jpg'
+import pic7 from '../assets/images/pic (7).jpg'
+import pic8 from '../assets/images/pic (8).jpg'
+import pic9 from '../assets/images/pic (9).jpg'
+import pic10 from '../assets/images/pic (10).jpg'
+import proj1 from '../assets/images/proj1.jpg'
+import proj2 from '../assets/images/proj2.jpg'
+import proj3 from '../assets/images/proj3.jpg'
+import proj4 from '../assets/images/proj4.jpg'
+import proj5 from '../assets/images/proj5.jpg'
+import proj6 from '../assets/images/proj6.jpg'
+
+export { pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, proj1, proj2, proj3, proj4, proj5, proj6 };

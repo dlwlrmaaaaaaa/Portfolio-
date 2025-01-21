@@ -1,14 +1,18 @@
 import { useState } from "react";
+
+import { BrowserRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import Contact from "./Components/Modal/Contact";
+import Projects from "./Pages/Projects";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

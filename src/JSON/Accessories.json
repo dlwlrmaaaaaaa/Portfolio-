@@ -1,32 +1,26 @@
 [
   {
     "id": 1,
-    "category": "WS Freya",
-    "src": "https://shop.wuquestudio.com/cdn/shop/files/1_6e0080b9-98ab-439a-b58b-62d69c113016.jpg?v=1706836177&width=1296"
+    "category": "WS Freya"
   },
   {
     "id": 2,
-    "category": "WS Mammoth 75",
-    "src": "https://ucarecdn.com/e382d2c7-badf-4bf6-aa05-27f0cfe9cedc/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSCF4560%20_1_-%E5%B7%B2%E5%90%8C%E6%84%8F.jpg"
+    "category": "WS Mammoth 75"
   },
   {
     "id": 3,
-    "category": "WS Bakeneko 60",
-    "src": "https://shop.wuquestudio.com/cdn/shop/products/2_d00bc34f-cc60-4945-b42b-d0115da14198.jpg?v=1645086105"
+    "category": "WS Bakeneko 60"
   },
   {
     "id": 4,
-    "category": "WS Ikki68",
-    "src": "https://shop.wuquestudio.com/cdn/shop/products/cover-ikki68-polaris_95c31c5f-b7cf-429c-82c7-8a57738f7829.jpg?v=1597884957"
+    "category": "WS Ikki68"
   },
   {
     "id": 5,
-    "category": "WS Ikki 65 Aurora",
-    "src": "https://shop.wuquestudio.com/cdn/shop/products/2_2a52cbdb-8715-4e8c-8429-60b75b2692fa.jpg?v=1626102090"
+    "category": "WS Ikki 65 Aurora"
   },
   {
     "id": 6,
-    "category": "WS Ginko65",
-    "src": "https://shop.wuquestudio.com/cdn/shop/products/Ginkgo65_Render03a.png?v=1632125398"
-  }
+    "category": "WS Ginko65"
+    }
 ]

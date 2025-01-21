@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="bg-[#2f2f2f] w-full flex items-center justify-center text-white">
         <div className="w-full lg:w-4/5 flex items-center justify-center p-12">
           <div className="flex flex-col md:flex-row w-full justify-center items-center gap-12">
-            <div className="flex items-center justify-center w-full">
+            {/* <div className="flex items-center justify-center w-full">
               <div className="w-full flex flex-col gap-4 items-start justify-center">
                 <div className="flex items-center justify-between w-full">
                   <p className="font-figtree font-semibold text-sm uppercase">
@@ -99,7 +99,7 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
             <div className="w-full flex flex-col gap-4 items-center justify-center">
               <div className="w-full flex items-center justify-center">
                 <p className="uppercase font-figtree text-sm font-semibold truncate">
@@ -111,12 +111,12 @@ const Footer = () => {
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
-                    href="https://www.facebook.com/itzxko.z"
+                    href="https://www.facebook.com/profile.php?id=100089794826007"
                   >
                     <TbBrandFacebook className="text-xl text-white group-hover:rotate-[360deg] ease-in-out duration-500" />
                   </a>
                 </div>
-                <div className="p-2 bg-gray-700 rounded-md group hover:rounded-full ease-in-out duration-500 flex items-center justify-center">
+                {/* <div className="p-2 bg-gray-700 rounded-md group hover:rounded-full ease-in-out duration-500 flex items-center justify-center">
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
@@ -142,7 +142,7 @@ const Footer = () => {
                   >
                     <TbBrandDiscord className="text-xl text-white group-hover:rotate-[360deg] ease-in-out duration-500" />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
